@@ -7,5 +7,5 @@
 
 ## 2. Đường dẫn đến các bài giảng.
 
-0. [ReadMe](./ReadMe.MD)
+0. [Main Page](./ReadMe.MD)
 1. [Chapter 1 : Connect JDBC With Java](./Chapter-1-Connect-JDBC-With-Java.MD)
