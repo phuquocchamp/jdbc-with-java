@@ -52,3 +52,57 @@ String url = "jdbc:mysql://localhost:3306/ontap";
 String username = "root";
 String password = "@dz251914423700";
 ```
+
+
+
+
+
+## 5. Code Demo
+
+``` java
+package database;
+import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.DriverManager;
+
+public class JDBCUtil {
+    public static Connection getConnection(){
+        // Khai báo connection c --> đối số cần tham chiếu.
+        Connection c = null;
+        try{
+            // Đăng kí mysql với DriverManager
+            DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
+            String url = "jdbc:mysql://localhost:3306/ontap";
+            String username = "root";
+            String password = "@dz251914423700";
+            c = DriverManager.getConnection(url,username,password);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return c;
+    }
+    public static void closeConnection(Connection c){
+        try{
+            if(c != null){
+                c.close();
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void printInfo(Connection c){
+        try{
+            if(c != null){
+                DatabaseMetaData mtdt = c.getMetaData();
+                System.out.println(mtdt.getDatabaseProductName());
+                System.out.println(mtdt.getDatabaseProductVersion());
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+}
+
+```

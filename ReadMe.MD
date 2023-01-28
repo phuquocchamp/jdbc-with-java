@@ -9,3 +9,4 @@
 
 0. [Main Page](./ReadMe.MD)
 1. [Chapter 1 : Connect JDBC With Java](./Chapter-1-Connect-JDBC-With-Java.MD)
+2. [Chapter 2 : JDBC Và Cách Kết Nối CSDL](./Chapter-2-JDBC-Va-Cach-Ket-Noi_CSDL.MD)
